@@ -1,0 +1,1362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akshat Jain | AI Student & Developer</title>
+
+    <meta name="description"
+          content="Official portfolio of Akshat Jain, a B.Tech AI student exploring artificial intelligence, programming and web development.">
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #080b16;
+            --card: #111729;
+            --card-light: #171e34;
+            --text: #f4f7ff;
+            --muted: #9ba7c4;
+            --primary: #8b5cf6;
+            --secondary: #22d3ee;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: var(--secondary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 11, 22, 0.85);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            filter: blur(180px);
+            opacity: 0.16;
+            top: -100px;
+            right: -100px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            background: rgba(34, 211, 238, 0.08);
+            color: var(--secondary);
+            padding: 7px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.8rem);
+            line-height: 1.12;
+            margin-bottom: 25px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                var(--secondary),
+                var(--primary)
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            max-width: 580px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 23px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                #6366f1
+            );
+            color: white;
+            border: none;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .hero-card {
+            background: linear-gradient(
+                145deg,
+                rgba(139, 92, 246, 0.18),
+                rgba(34, 211, 238, 0.05)
+            );
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+        }
+
+        .profile-image {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .hero-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-card p {
+            font-size: 0.95rem;
+            margin: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-card {
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            border-left: 3px solid var(--primary);
+        }
+
+        .education-card h3 {
+            color: var(--text);
+        }
+
+        .education-card .date {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            text-align: center;
+            padding: 25px 15px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: var(--card-light);
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .skill h3 {
+            font-size: 1rem;
+        }
+
+        .skill p {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .project-number {
+            color: var(--secondary);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .project-card h3 {
+            margin: 12px 0;
+            font-size: 1.35rem;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(139, 92, 246, 0.13);
+            color: #c4b5fd;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievement-list {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .achievement {
+            background: var(--card);
+            padding: 22px 25px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--muted);
+        }
+
+        .achievement strong {
+            color: var(--text);
+        }
+
+        /* =========================
+           HOBBIES
+        ========================= */
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .hobby {
+            text-align: center;
+            padding: 22px 10px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+
+        .hobby-icon {
+            display: block;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .contact-info p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .contact-info a {
+            color: var(--secondary);
+        }
+
+        form {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            background: #080b16;
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-status {
+            margin-top: 15px;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 900px) {
+            .hero-content,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero-card {
+                max-width: 450px;
+                margin: auto;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hobbies-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hobbies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card,
+            .project-card,
+            form {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header>
+        <nav class="container">
+
+            <a href="#home" class="logo">
+                AJ<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary">
+                Let's Connect
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <div>
+
+                    <span class="badge">
+                        ✦ B.Tech AI Student | Developer in Progress
+                    </span>
+
+                    <h1>
+                        Hi, I'm <br>
+                        <span class="gradient-text">Akshat Jain.</span>
+                    </h1>
+
+                    <p>
+                        I'm a first-year B.Tech student at Zenith School
+                        of AI, exploring programming, artificial intelligence,
+                        and web development. I enjoy learning new technologies
+                        and turning ideas into meaningful projects.
+                    </p>
+
+                    <div class="buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Work →
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Contact Me
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <!-- Replace image.png with your own photo -->
+                    <img
+                        src="image.png"
+                        alt="Akshat Jain profile photo"
+                        class="profile-image"
+                    >
+
+                    <h3>Akshat Jain</h3>
+
+                    <p>
+                        AI Student • Programmer • Future Builder
+                    </p>
+
+                    <div class="social-links">
+
+                        <!-- Replace # with your actual profile URLs -->
+                        <a href="#" target="_blank" rel="noopener">
+                            LinkedIn
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener">
+                            GitHub
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener">
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================= -->
+
+        <section class="section" id="about">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    About <span>Me</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    A little about my background, interests, and what
+                    I'm currently working toward.
+                </p>
+
+                <div class="about-grid">
+
+                    <div class="card">
+
+                        <h3>Who I Am</h3>
+
+                        <p>
+                            I'm Akshat Jain, a B.Tech student at Zenith School
+                            of AI. I'm building my foundation in programming
+                            and exploring how technology can solve real-world
+                            problems.
+                        </p>
+
+                        <br>
+
+                        <p>
+                            My current interests include artificial
+                            intelligence, web development, mathematics,
+                            and competitive coding.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>My Learning Journey</h3>
+
+                        <p>
+                            I'm working on improving my programming skills
+                            through practical projects and consistent
+                            learning. My goal is to understand how software
+                            works and eventually build useful products.
+                        </p>
+
+                        <br>
+
+                        <p>
+                            I believe in learning by building, experimenting,
+                            and improving one step at a time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+        ========================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My <span>Education</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    My academic background.
+                </p>
+
+                <div class="card education-card">
+
+                    <div class="date">
+                        2026 — Present
+                    </div>
+
+                    <h3>
+                        B.Tech in Artificial Intelligence
+                    </h3>
+
+                    <p>
+                        Zenith School of AI
+                    </p>
+
+                    <p>
+                        K.R. Mangalam University, Haryana
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Currently building foundations in programming,
+                        computer science, mathematics, and AI.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================= -->
+
+        <section class="section" id="skills">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My <span>Skills</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Technologies and subjects I'm learning and exploring.
+                </p>
+
+                <div class="skills-grid">
+
+                    <div class="skill">
+                        <div class="skill-icon">🐍</div>
+                        <h3>Python</h3>
+                        <p>Programming Fundamentals</p>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-icon">🌐</div>
+                        <h3>HTML & CSS</h3>
+                        <p>Web Development</p>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-icon">🤖</div>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Learning & Exploration</p>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-icon">🧠</div>
+                        <h3>Problem Solving</h3>
+                        <p>Logical Thinking</p>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-icon">📐</div>
+                        <h3>Mathematics</h3>
+                        <p>Core Concepts</p>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-icon">💻</div>
+                        <h3>Programming</h3>
+                        <p>Continuous Learning</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================= -->
+
+        <section class="section" id="projects">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Featured <span>Projects</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    A selection of projects and learning experiences.
+                    Add your actual work as you build it.
+                </p>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+
+                        <div class="project-number">
+                            PROJECT 01
+                        </div>
+
+                        <h3>Personal Portfolio</h3>
+
+                        <p>
+                            A responsive personal portfolio website
+                            created to showcase my background, skills,
+                            interests, and learning journey.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Responsive Design</span>
+                        </div>
+
+                        <br>
+
+                        <a href="#" class="btn btn-secondary">
+                            View Project →
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-card">
+
+                        <div class="project-number">
+                            PROJECT 02
+                        </div>
+
+                        <h3>Science Exhibition Project</h3>
+
+                        <p>
+                            A science exhibition project demonstrating
+                            my interest in scientific concepts,
+                            experimentation, and presentation.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Science</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">Presentation</span>
+                        </div>
+
+                        <br>
+
+                        <a href="#" class="btn btn-secondary">
+                            View Project →
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-card">
+
+                        <div class="project-number">
+                            PROJECT 03
+                        </div>
+
+                        <h3>Programming Practice</h3>
+
+                        <p>
+                            A collection of beginner programming exercises
+                            focused on building problem-solving skills
+                            and understanding programming fundamentals.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Logic</span>
+                            <span class="tag">Coding</span>
+                        </div>
+
+                        <br>
+
+                        <a href="#" class="btn btn-secondary">
+                            View Project →
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-card">
+
+                        <div class="project-number">
+                            PROJECT 04
+                        </div>
+
+                        <h3>Future AI Project</h3>
+
+                        <p>
+                            A placeholder for a future artificial
+                            intelligence project. This section can be
+                            updated once you build and document your work.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Future Build</span>
+                        </div>
+
+                        <br>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Collaborate →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACHIEVEMENTS
+        ========================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Achievements & <span>Milestones</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Academic and extracurricular highlights.
+                </p>
+
+                <div class="achievement-list">
+
+                    <div class="achievement">
+                        🏆 <strong>Academic Achievement:</strong>
+                        Scored 94% in Class 10 CBSE Board Examination.
+                    </div>
+
+                    <div class="achievement">
+                        🥇 <strong>Science Exhibition:</strong>
+                        1st Prize, Inter-School Science Exhibition.
+                    </div>
+
+                    <div class="achievement">
+                        🧮 <strong>Mathematics:</strong>
+                        Participated in IMO.
+                        <br>
+                        <small>
+                            Add the exact competition name and year
+                            for accuracy.
+                        </small>
+                    </div>
+
+                    <div class="achievement">
+                        💻 <strong>Web Development:</strong>
+                        Built a personal portfolio using HTML and CSS.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HOBBIES
+        ========================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My <span>Interests</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Things I enjoy beyond academics.
+                </p>
+
+                <div class="hobbies-grid">
+
+                    <div class="hobby">
+                        <span class="hobby-icon">🏓</span>
+                        Table Tennis
+                    </div>
+
+                    <div class="hobby">
+                        <span class="hobby-icon">🎥</span>
+                        Documentaries
+                    </div>
+
+                    <div class="hobby">
+                        <span class="hobby-icon">🎵</span>
+                        Music
+                    </div>
+
+                    <div class="hobby">
+                        <span class="hobby-icon">💻</span>
+                        Coding
+                    </div>
+
+                    <div class="hobby">
+                        <span class="hobby-icon">🎮</span>
+                        Gaming
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================= -->
+
+        <section class="section" id="contact">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Let's <span>Connect</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    Have an idea, opportunity, or something interesting
+                    to discuss? Send me a message.
+                </p>
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+
+                        <h3>Get in Touch</h3>
+
+                        <br>
+
+                        <p>
+                            I'm interested in connecting with students,
+                            developers, and people working on interesting
+                            projects.
+                        </p>
+
+                        <p>
+                            📧 Email:
+                            <a href="mailto:akshatschool04@gmail.com">
+                                Contact via Email
+                            </a>
+                        </p>
+
+                        <p>
+                            🔗 LinkedIn:
+                            <a href="#" target="_blank" rel="noopener">
+                                My LinkedIn Profile
+                            </a>
+                        </p>
+
+                        <p>
+                            💻 GitHub:
+                            <a href="#" target="_blank" rel="noopener">
+                                My GitHub Profile
+                            </a>
+                        </p>
+
+                        <p>
+                            📍 Location: Delhi, India
+                        </p>
+
+                    </div>
+
+
+                    <form id="contactForm">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Your Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="reason">
+                                Reason for Contact
+                            </label>
+
+                            <select id="reason" name="reason" required>
+
+                                <option value="">
+                                    Select a reason
+                                </option>
+
+                                <option value="General Enquiry">
+                                    General Enquiry
+                                </option>
+
+                                <option value="Collaboration">
+                                    Collaboration
+                                </option>
+
+                                <option value="Project Discussion">
+                                    Project Discussion
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Your Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Write your message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Send Message →
+                        </button>
+
+                        <p class="form-status" id="formStatus"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span> Akshat Jain.
+                Built with HTML, CSS & curiosity.
+            </p>
+
+            <p>
+                Keep learning. Keep building. 🚀
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        // Automatically update the copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Demo form interaction
+        // This does NOT send emails to you.
+        // A backend or form service is required for real submissions.
+
+        const form = document.getElementById("contactForm");
+
+        const status = document.getElementById("formStatus");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            status.textContent =
+                "This is a demo form. Connect a backend or form service to receive messages.";
+
+        });
+
+    </script>
+
+</body>
+</html>
